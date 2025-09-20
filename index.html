@@ -192,6 +192,13 @@
       .hero-nautz--single .nautz-main { max-height: 1000px; margin-left: auto; object-position: right center; }
     }
 
+    /* Mobile: control spacing above the ticker for the image only */
+    @media (max-width: 991.98px) {
+      .hero-nautz--single { margin-bottom: -50px; }
+      /* Alternatively, target the image only:
+         .hero-nautz--single .nautz-main { margin-bottom: 24px; } */
+    }
+
     /* Center navbar links exactly in the bar on desktop */
     @media (min-width: 992px) {
       .navbar .navbar-nav.navbar-center { position: absolute; left: 50%; transform: translateX(-50%); }
@@ -207,7 +214,7 @@
   <nav class="navbar navbar-expand-lg sticky-top" style="background: rgba(93, 93, 93, 0.276); backdrop-filter: blur(6px);">
     <div class="container">
       <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="#" style="color: var(--brand-primary);">
-        <img src="assets/logo/Logo.png" alt="SolNautz logo" class="brand-logo">
+        <img src="assets/logo/logo.png" alt="SolNautz logo" class="brand-logo">
         <span class="brand-text">SolNautz</span>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
