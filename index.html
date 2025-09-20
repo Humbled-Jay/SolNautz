@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SolNautz — Solana Astronaut NFT Collection</title>
+  <meta name="description" content="SolNautz is a Solana astronaut-inspired NFT collection. Mint on LaunchMyNFT and trade on Magic Eden. Join the crew on X (Twitter).">
+  <meta name="keywords" content="SolNautz, Solana NFTs, astronaut, Magic Eden, LaunchMyNFT, crypto art, web3">
+  <link rel="canonical" href="https://magiceden.us/marketplace/solnautz___">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="SolNautz — Solana Astronaut NFT Collection">
+  <meta property="og:description" content="Mint SolNautz on LaunchMyNFT and trade on Magic Eden. Join the crew on X.">
+  <meta property="og:url" content="https://magiceden.us/marketplace/solnautz___">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@SolNautz">
+  <meta name="twitter:title" content="SolNautz — Solana Astronaut NFT Collection">
+  <meta name="twitter:description" content="Mint on LaunchMyNFT and trade on Magic Eden. Join the crew on X.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0b0f14">
+  <meta property="og:site_name" content="SolNautz">
+  <meta property="og:image" content="https://dummyimage.com/1200x630/0b0f14/ffffff.png&text=SolNautz">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
+  <meta name="twitter:image" content="https://dummyimage.com/1200x630/0b0f14/ffffff.png&text=SolNautz">
+
+  <!-- Favicon (optional) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🚀</text></svg>">
+  
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "SolNautz",
+    "url": "https://magiceden.us/marketplace/solnautz___",
+    "sameAs": [
+      "https://x.com/SolNautz",
+      "https://launchmynft.io/sol/17481",
+      "https://magiceden.us/marketplace/solnautz___"
+    ]
+  }
+  </script>
+
+  <!-- CSS: Bootstrap + simple custom styles to mirror the vibe -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+  <!-- Fonts: Futuristic display + clean body -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Oxanium:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    @font-face {
+      font-family: 'Fonstars';
+      src: url('assets/fonts/Fonstars-4Bo0p.otf') format('opentype');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    :root {
+      --brand-dark: #000000;
+      --brand-primary: #ffffff;
+      --brand-secondary: #ffffff;
+      --brand-danger: #ff5470;
+    }
+    html, body { background: var(--brand-dark); color: #f2f6ff; font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
+    /* Improve general text contrast */
+    p, li, .lead, .nav-link, .btn-outline-light { color: #e8f0ff; }
+    h1, h2, h3, h4, h5, h6 { color: #ffffff; font-family: 'Oxanium', 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; letter-spacing: 0.02em; }
+    /* Use main logo font for primary titles only */
+    h1, h2 { font-family: 'Fonstars', 'Oxanium', 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
+    a.link-light, a { color: #ffffff; }
+    a:hover { color: #ffffff; }
+    .text-stroke { -webkit-text-stroke: 1px rgba(255,255,255,0.25); text-shadow: 0 2px 0 rgba(0,0,0,0.5); }
+    .text-splash { color: var(--brand-secondary); filter: drop-shadow(0 1px 0 rgba(0, 0, 0, 0.4)); }
+    .hero {
+      background: radial-gradient(1200px 600px at 10% -10%, rgba(21,242,165,0.25), rgba(21,242,165,0) 60%),
+                  radial-gradient(1200px 600px at 90% -10%, rgba(139,233,253,0.25), rgba(139,233,253,0) 60%),
+                  linear-gradient(180deg, rgba(11,15,20,1) 0%, rgba(11,15,20,1) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    /* Frosted background image for hero */
+    .hero--frost::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: url('assets/Background/hero.jpg') center/cover no-repeat;
+      filter: blur(12px) brightness(1.15) contrast(1.1) saturate(140%);
+      transform: scale(1.08);
+      opacity: 0.75;
+      z-index: 0;
+    }
+    .hero--frost::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(11,15,20,0.35), rgba(11,15,20,0.6));
+      z-index: 1;
+    }
+    .hero--frost > * { position: relative; z-index: 2; }
+    .ticker {
+      border-top: 2px solid rgba(255,255,255,0.15);
+      border-bottom: 2px solid rgba(255,255,255,0.15);
+      background: rgba(255,255,255,0.05);
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    .ticker__inner { display: inline-block; padding: 0.5rem 0; animation: ticker 20s linear infinite; }
+    .ticker__item { margin: 0 1.5rem; opacity: 0.9; }
+    @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    .btn-primary { background: var(--brand-primary); border-color: var(--brand-primary); color: #071316; }
+    .btn-primary:hover { filter: brightness(1.1); }
+    .btn-outline-light { border-color: rgba(255,255,255,0.7); color: #f2f6ff; }
+    .btn-outline-light:hover { color: #071316; background: #f2f6ff; border-color: #f2f6ff; }
+    .section { padding: 5rem 0; }
+    .card-glass { background: rgba(255,255,255,0.075); border: 1px solid rgba(255,255,255,0.18); backdrop-filter: blur(8px); }
+    /* Improve readability inside glass cards */
+    .card-glass p,
+    .card-glass li,
+    .card-glass div { color: #eaf2ff; }
+    .text-neon { color: var(--brand-primary); }
+    .card-glass h5 { color: #b6f6ff; }
+    .roadmap .phase-badge { letter-spacing: .04em; opacity: .85; }
+    .footer { border-top: 1px solid rgba(255,255,255,0.15); }
+    a { text-decoration: none; }
+
+    /* Ticker contrast */
+    .ticker { color: #eaf2ff; }
+    .ticker__item { opacity: 1; }
+
+    /* Clean heading variant for sections that need no stroke */
+    .heading-clean { -webkit-text-stroke: 0 !important; text-shadow: none !important; color: #eaf2ff; font-weight: 700; letter-spacing: 0.01em; }
+
+    /* Navbar toggler visible on dark */
+    .navbar .navbar-toggler {
+      border-color: rgba(14, 14, 14, 0.386);
+    }
+    .navbar .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255,255,255,0.85)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+    /* Gallery cards */
+    .nft-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 16px; overflow: hidden; transition: transform .2s ease, box-shadow .2s ease; }
+    .nft-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,.35); }
+    .nft-card img { width: 100%; aspect-ratio: 1 / 1; height: auto; object-fit: cover; display: block; }
+    .nft-card .meta { padding: .75rem 1rem; display: flex; justify-content: space-between; align-items: center; min-height: 44px; }
+    /* Image buttons (no green outer box) */
+    .cta-image-btn img { width: 200px; height: auto; display: block; }
+    .cta-image-btn { display: block; width: max-content; margin: 0 auto; }
+    @media (min-width: 992px) { .cta-image-btn img { width: 220px; } }
+    /* Brand mark */
+    .brand-logo { width: 55px; height: 55px; object-fit: contain; display: block; }
+    .brand-text { font-family: 'Fonstars', 'Oxanium', 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; letter-spacing: .02em; font-size: 2.0rem; line-height: 1; }
+
+    /* X logo color control */
+    .x-logo { height: 1.1em; width: auto; margin-left: .35rem; margin-right: 0; filter: brightness(0) invert(1); transition: filter .2s ease; }
+    .btn:hover .x-logo { filter: brightness(0) saturate(100%); }
+
+    /* CTA: Follow on X (bottom) hover should turn button black */
+    .btn-x-hover-black:hover { background: #000000; border-color: #000000; color: #ffffff; filter: none; }
+
+    /* X button: black by default, white on hover */
+    .btn-x { background: #000000; border-color: #000000; color: #ffffff; }
+    .btn-x:hover { background: #ffffff; border-color: #ffffff; color: #000000; filter: none; }
+
+    /* Discord button: brand default, white on hover with black text/icon */
+    .btn-discord { background: #5865F2; border-color: #5865F2; color: #ffffff; }
+    .btn-discord:hover { background: #ffffff; border-color: #ffffff; color: #000000; filter: none; }
+    .discord-icon { height: 1.1em; width: auto; margin-left: .35rem; vertical-align: -0.125em; filter: brightness(0) invert(1); }
+    .btn-discord:hover .discord-icon { filter: brightness(0) saturate(100%); }
+
+    /* Magic Eden button: gradient default, white on hover with black text/icon */
+    .btn-me { background: linear-gradient(135deg, #FF1F8F 0%, #A93AFF 100%); border-color: transparent; color: #ffffff; }
+    .btn-me:hover { background: #ffffff; border-color: #ffffff; color: #000000; filter: none; }
+    .me-icon { font-size: 1.1em; margin-left: .35rem; vertical-align: -0.125em; color: #ffffff; }
+    .btn-me:hover .me-icon { color: #000000; }
+    .me-icon-img { height: 1.1em; width: auto; margin-left: .35rem; vertical-align: -0.125em; filter: none; }
+    .btn-me:hover .me-icon-img { filter: brightness(0) saturate(100%); }
+
+    /* Staking button: brand color default, white on hover with black text/icon */
+    .btn-stake { background: #b18dee; border-color: #b18dee; color: #ffffff; }
+    .btn-stake:hover { background: #ffffff; border-color: #ffffff; color: #000000; filter: none; }
+    .stake-icon { height: 1.1em; width: auto; margin-left: .35rem; vertical-align: -0.125em; filter: brightness(0) invert(1); }
+    .btn-stake:hover .stake-icon { filter: brightness(0) saturate(100%); }
+
+    /* Hero Nautz image layout */
+    .hero-nautz img { width: 100%; height: auto; display: block; }
+    .hero-nautz--single { text-align: right; margin: 0; }
+    .hero-nautz--single .nautz-main { width: 100%; height: auto; object-fit: contain; }
+    @media (min-width: 992px) {
+      .hero-nautz--single { position: absolute; bottom: -3rem; right: -10rem; left: 41.6667%; }
+      .hero-nautz--single .nautz-main { max-height: 1000px; margin-left: auto; object-position: right center; }
+    }
+
+    /* Center navbar links exactly in the bar on desktop */
+    @media (min-width: 992px) {
+      .navbar .navbar-nav.navbar-center { position: absolute; left: 50%; transform: translateX(-50%); }
+    }
+
+    /* Raise only the left hero content (text/buttons) without changing the image */
+    .hero-left-offset { padding-bottom: 4rem; }
+    @media (min-width: 992px) { .hero-left-offset { padding-bottom: 1rem; } }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg sticky-top" style="background: rgba(93, 93, 93, 0.276); backdrop-filter: blur(6px);">
+    <div class="container">
+      <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="#" style="color: var(--brand-primary);">
+        <img src="assets/logo/logo.png" alt="SolNautz logo" class="brand-logo">
+        <span class="brand-text">SolNautz</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center w-100" id="nav">
+        <ul class="navbar-nav mb-2 mb-lg-0 navbar-center">
+          <li class="nav-item"><a class="nav-link text-light" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link text-light" href="#collection">Collection</a></li>
+          <li class="nav-item"><a class="nav-link text-light" href="#mint">Mint</a></li>
+          <li class="nav-item"><a class="nav-link text-light" href="#roadmap">Roadmap</a></li>
+          <li class="nav-item"><a class="nav-link text-light" href="#faq">FAQ</a></li>
+        </ul>
+        
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero hero--frost py-5 py-lg-7">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-5 hero-left-offset">
+          <span class="d-inline-block mb-3 text-splash fw-semibold">SOLANA ASTRONAUTS</span>
+          <h1 class="display-4 fw-bold text-stroke">Explore The SolNautz Universe</h1>
+          <p class="lead mt-3">A collection of astronaut-themed characters traveling the Solana galaxy. Mint your SolNaut and join the mission.</p>
+          <div class="d-flex flex-wrap gap-3 mt-4">
+            <a class="btn btn-stake btn-lg" target="_blank" rel="noopener" href="https://www.solsuite.io/solnautz">
+              <span>Staking</span>
+              <img src="assets/buttons/solsuite-icon.png" alt="Staking" class="stake-icon">
+            </a>
+            <a class="btn btn-me btn-lg" target="_blank" rel="noopener" href="https://magiceden.us/marketplace/solnautz___">
+              <span>Magic Eden</span>
+              <img src="assets/buttons/ME-white.png" alt="Magic Eden" class="me-icon-img">
+            </a>
+            <a class="btn btn-x btn-lg" target="_blank" rel="noopener" href="https://x.com/SolNautz">
+              <span>Follow on</span>
+              <img src="assets/buttons/x-logo.png" alt="X" class="x-logo">
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <div class="hero-nautz hero-nautz--single">
+            <img src="assets/Nautz/nautzmain.png" alt="SolNautz" class="nautz-main">
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Ticker -->
+  <div class="ticker">
+    <div class="ticker__inner">
+      <span class="ticker__item">🚀 SolNautz</span>
+      <span class="ticker__item">⚡ Solana</span>
+      <span class="ticker__item">🪐 Astronauts</span>
+      <span class="ticker__item">💫 Community</span>
+      <span class="ticker__item">🎨 Art</span>
+      <span class="ticker__item">🚀 SolNautz</span>
+      <span class="ticker__item">⚡ Solana</span>
+      <span class="ticker__item">🪐 Astronauts</span>
+      <span class="ticker__item">💫 Community</span>
+      <span class="ticker__item">🎨 Art</span>
+      <span class="ticker__item">🧊 Staking</span>
+      <span class="ticker__item">🛡️ Holders</span>
+      <span class="ticker__item">🛰️ We Are Nautz</span>
+      <span class="ticker__item">🌌 Lore</span>
+      <span class="ticker__item">💎 Rarity</span>
+      <span class="ticker__item">🎁 Airdrops</span>
+      <span class="ticker__item">🤝 Collabs</span>
+      <span class="ticker__item">🎙️ Spaces</span>
+      <span class="ticker__item">🧭 Roadmap</span>
+      <span class="ticker__item">🧪 Utility</span>
+      <span class="ticker__item">🫂 Community</span>
+    </div>
+  </div>
+
+  <!-- About -->
+  <section id="about" class="section space-bg" style="position: relative;">
+    <div class="stars stars--1"></div>
+    <div class="stars stars--2"></div>
+    <div class="stars stars--3"></div>
+    <div class="container">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-6">
+          <div class="card card-glass p-4 p-md-5 h-100">
+            <h2 class="h1 heading-clean">What is SolNautz?</h2>
+            <p class="fs-5 mt-3">SolNautz is a character-driven NFT collection inspired by space exploration and the Solana ecosystem. Each SolNaut is a unique astronaut venturing into on-chain frontiers.</p>
+            <ul class="mt-3 mb-0">
+              <li>Mint on Solana via LaunchMyNFT</li>
+              <li>Trade on Magic Eden</li>
+              <li>Join our community on X</li>
+            </ul>
+            <div class="mt-4 d-flex gap-2">
+              <a class="btn btn-primary" target="_blank" rel="noopener" href="https://launchmynft.io/sol/17481">Mint</a>
+              <a class="btn btn-outline-light" target="_blank" rel="noopener" href="https://magiceden.us/marketplace/solnautz___">Marketplace</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="p-4 p-md-5 border rounded-4 border-opacity-25 h-100" style="border-color: rgba(255,255,255,.2) !important;">
+            <h3 class="text-neon">Core Values</h3>
+            <div class="row g-3 mt-1">
+              <div class="col-6">
+                <div class="card card-glass p-3 h-100">
+                  <div class="small text-splash">Art & Lore</div>
+                  <div>Original astronaut characters and a growing universe.</div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="card card-glass p-3 h-100">
+                  <div class="small text-splash">Community</div>
+                  <div>Friendly crew, open to all explorers.</div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="card card-glass p-3 h-100">
+                  <div class="small text-splash">Speed</div>
+                  <div>Built on Solana for fast, low-cost transactions.</div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="card card-glass p-3 h-100">
+                  <div class="small text-splash">Builders</div>
+                  <div>Iterative drops, utilities, and collabs.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Collection Gallery -->
+  <section id="collection" class="section">
+    <div class="container">
+      <h2 class="display-6 text-center heading-clean">Collection</h2>
+      <p class="text-center mb-4">Featured SolNautz</p>
+      <div class="row g-4">
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="nft-card">
+            <img src="assets/nfts/solnautz-01.jpeg" alt="Solnautz #3479" loading="lazy">
+            <div class="meta"><span>Solnautz #3479</span></div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="nft-card">
+            <img src="assets/nfts/solnautz-02.jpeg" alt="SolNautz #2150" loading="lazy">
+            <div class="meta"><span>SolNautz #2150</span></div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="nft-card">
+            <img src="assets/nfts/solnautz-03.jpeg" alt="BASC SolNautz" loading="lazy">
+            <div class="meta"><span>1/1 BASC SolNautz</span></div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="nft-card">
+            <img src="assets/nfts/solnautz-04.jpeg" alt="LuckySea SolNautz" loading="lazy">
+            <div class="meta"><span>1/1 LuckySea SolNautz</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How to Mint -->
+  <section id="mint" class="section">
+    <div class="container">
+      <h2 class="display-6 text-center heading-clean">HOW TO BUY A SOLNAUTZ</h2>
+      <div class="row g-4 mt-1 align-items-stretch">
+        <div class="col-md-6 col-lg-3">
+          <div class="card card-glass p-4 h-100">
+            <h5>1. Get a Solana Wallet</h5>
+            <p class="mb-0">Install Phantom or Solflare. Fund with SOL for gas and mint price.</p>
+            <div class="cta-image-btn mt-3 d-inline-block">
+              <img src="assets/buttons/wallets.png" alt="Wallets">
+            </div>
+            <div class="cta-image-btn mt-2 d-inline-block">
+              <img src="assets/buttons/wallet2.png" alt="Wallets 2">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card card-glass p-4 h-100">
+            <h5>2. Go to Magic Eden</h5>
+            <p class="mb-0">Head over to Magic Eden using the button below.</p>
+            <a class="cta-image-btn mt-3 d-inline-block" target="_blank" rel="noopener" href="https://magiceden.us/marketplace/solnautz___">
+              <img src="assets/buttons/ME Button.png" alt="Open SolNautz on Magic Eden">
+            </a>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card card-glass p-4 h-100">
+            <h5>3. Connect & Choose</h5>
+            <p class="mb-0">Connect your wallet, search for SolNautz, and pick a listing you like.</p>
+            <div class="cta-image-btn mt-3 d-inline-block">
+              <img src="assets/buttons/mint.png" alt="Select a SolNautz listing">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card card-glass p-4 h-100">
+            <h5>4. Review & Buy</h5>
+            <p class="mb-0">Confirm the purchase in your wallet. Your SolNautz will appear in your collection.</p>
+            <div class="d-flex gap-3 flex-wrap mt-3 justify-content-center">
+              <a class="btn btn-me btn-lg" target="_blank" rel="noopener" href="https://magiceden.us/marketplace/solnautz___">
+                <span>Magic Eden</span>
+                <img src="assets/buttons/ME-white.png" alt="Magic Eden" class="me-icon-img">
+              </a>
+              <a class="cta-image-btn d-inline-block" target="_blank" rel="noopener" href="https://www.tensor.trade/trade/solnautz_nft">
+                <img src="assets/buttons/Tensor Button.png" alt="View on Tensor">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Roadmap -->
+  <section id="roadmap" class="section roadmap">
+    <div class="container">
+      <h2 class="display-6 text-center heading-clean">Roadmap</h2>
+      <div class="row g-4 mt-1">
+        <div class="col-md-6 col-lg-3">
+          <div class="card card-glass p-4 h-100">
+            <div class="small text-splash phase-badge">PHASE 01</div>
+            <h5>Launch & Community</h5>
+            <ul class="mb-0">
+              <li>Public mint on LaunchMyNFT</li>
+              <li>Magic Eden listing</li>
+              <li>Twitter campaigns</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card card-glass p-4 h-100">
+            <div class="small text-splash phase-badge">PHASE 02</div>
+            <h5>Universe Building</h5>
+            <ul class="mb-0">
+              <li>Lore + character drops</li>
+              <li>Collab art & spaces</li>
+              <li>Holder roles</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card card-glass p-4 h-100">
+            <div class="small text-splash phase-badge">PHASE 03</div>
+            <h5>Tools & Utility</h5>
+            <ul class="mb-0">
+              <li>Community tools</li>
+              <li>Trait analytics</li>
+              <li>IRL/virtual events</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card card-glass p-4 h-100">
+            <div class="small text-splash phase-badge">PHASE 04</div>
+            <h5>To The Stars</h5>
+            <ul class="mb-0">
+              <li>Further drops</li>
+              <li>Builder grants</li>
+              <li>More surprises</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section">
+    <div class="container">
+      <h2 class="display-6 text-center heading-clean">FAQ</h2>
+      <div class="row g-4 mt-1">
+        <div class="col-lg-6">
+          <div class="card card-glass p-4 h-100">
+            <h5>What is SolNautz?</h5>
+            <p class="mb-0">A Solana-based NFT collection featuring astronaut characters. Stake your SolNaut and trade on Magic Eden.</p>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card card-glass p-4 h-100">
+            <h5>Where do I mint and trade?</h5>
+            <p class="mb-0">Stake via <a target="_blank" rel="noopener" href="https://www.solsuite.io/solnautz">SolSuite</a> and trade on <a target="_blank" rel="noopener" href="https://magiceden.us/marketplace/solnautz___">Magic Eden</a>.</p>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card card-glass p-4 h-100">
+            <h5>What wallet do I need?</h5>
+            <p class="mb-0">Use a Solana wallet like Phantom or Solflare with enough SOL to cover mint and fees.</p>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card card-glass p-4 h-100">
+            <h5>How to stay updated?</h5>
+            <p class="mb-0">Follow us on X: <a target="_blank" rel="noopener" href="https://x.com/SolNautz">@SolNautz</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section py-5" style="padding-top: 3rem !important; padding-bottom: 3rem !important;">
+    <div class="container">
+      <div class="card card-glass p-5 text-center">
+        <h2 class="h1 heading-clean">Join Our Community</h2>
+        <p class="lead">Hop in for updates, spaces, and more.</p>
+        <div class="d-flex justify-content-center gap-2 flex-wrap">
+          <a class="btn btn-x btn-lg" target="_blank" rel="noopener" href="https://x.com/SolNautz">
+            <span>Follow on</span>
+            <img src="assets/buttons/x-logo.png" alt="X" class="x-logo">
+          </a>
+          <a class="btn btn-discord btn-lg" target="_blank" rel="noopener" href="https://discord.gg/byWmMRnCDh">
+            <span>Join Discord</span>
+            <img src="assets/buttons/discord-ico.png" alt="Discord" class="discord-icon">
+          </a>
+          <a class="btn btn-me btn-lg" target="_blank" rel="noopener" href="https://magiceden.us/marketplace/solnautz___">
+            <span>Magic Eden</span>
+            <img src="assets/buttons/ME-white.png" alt="Magic Eden" class="me-icon-img">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer py-4">
+    <div class="container">
+      <div class="row align-items-center g-3">
+        <div class="col-lg-6 text-center text-lg-start">
+          <div>© <span id="year"></span> SolNautz. All rights reserved.</div>
+        </div>
+        <div class="col-lg-6">
+          <div class="d-flex justify-content-center justify-content-lg-end gap-3">
+            <a class="link-light" target="_blank" rel="noopener" href="https://www.solsuite.io/solnautz">Stake</a>
+            <a class="link-light" target="_blank" rel="noopener" href="https://magiceden.us/marketplace/solnautz___">Marketplace</a>
+            <a class="link-light" target="_blank" rel="noopener" href="https://x.com/SolNautz">Twitter</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+
+
+
